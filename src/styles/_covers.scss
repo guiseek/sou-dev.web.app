@@ -1,0 +1,54 @@
+@mixin cover2x() {
+  @media (min-width: 1025px) and (max-width: 2048px) {
+    @content;
+  }
+}
+
+.demo-blog {
+  .mdl-card__media h3 {
+    mix-blend-mode: luminosity;
+    filter: invert(0.8);
+  }
+  .cover-firebase .mdl-card__media {
+    background-image: url("/assets/images/covers/cover-firebase.webp");
+    h3 {
+      color: currentColor;
+    }
+    @include cover2x {
+      background-image: url("/assets/images/covers/cover-firebase@2x.webp");
+    }
+  }
+  .cover-angular-cdk .mdl-card__media {
+    background-image: url("/assets/images/covers/cover-angular-cdk.webp");
+    @include cover2x {
+      background-image: url("/assets/images/covers/cover-angular-cdk@2x.webp");
+    }
+    h3 {
+      color: firebrick;
+    }
+  }
+  .cover-safari-webkit .mdl-card__media {
+    background-image: url("/assets/images/covers/cover-safari-webkit.webp");
+    @include cover2x {
+      background-image: url("/assets/images/covers/cover-safari-webkit@2x.png");
+    }
+  }
+  .cover-angular-pwa .mdl-card__media {
+    background-image: url("/assets/images/covers/cover-angular-pwa.webp");
+    @include cover2x {
+      background-image: url("/assets/images/covers/cover-angular-pwa@2x.webp");
+    }
+    h3 {
+      color: chocolate;
+    }
+  }
+  .cover-nx .mdl-card__media {
+    background-image: url("/assets/images/covers/cover-nx.webp");
+    @include cover2x {
+      background-image: url("/assets/images/covers/cover-nx@2x.webp");
+    }
+    h3 {
+      color: chocolate;
+    }
+  }
+}

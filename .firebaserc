@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "head-tech": {
+      "hosting": {
+        "app": [
+          "sou-dev"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "head-tech"
+  }
+}

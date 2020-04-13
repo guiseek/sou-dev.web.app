@@ -3,11 +3,19 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve -o",
     "build": "ng build",
+    "build:prod": "ng build sou-dev --buildOptimizer --extractCss --extractLicenses --no-namedChunks --optimization --outputHashing=all --no-sourceMap --statsJson --no-vendorChunk",
+    "open": "http-server -c-1 dist/static -p 8989 -o",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "scully": "scully",
+    "scully:serve": "scully serve",
+    "scully:rsd": "npm run scully -- --nw --RSD",
+    "scully:build": "npm run build:prod && npm run scully:rsd",
+    "deploy": "firebase deploy --only hosting",
+    "ci": "npm run scully:build && npm run deploy"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +27,9 @@
     "@angular/platform-browser": "~9.0.5",
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
+    "@scullyio/init": "^0.0.23",
+    "@scullyio/ng-lib": "latest",
+    "@scullyio/scully": "latest",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -28,9 +39,9 @@
     "@angular/cli": "~9.0.5",
     "@angular/compiler-cli": "~9.0.5",
     "@angular/language-service": "~9.0.5",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",

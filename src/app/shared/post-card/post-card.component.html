@@ -1,0 +1,21 @@
+<article itemscope itemtype="http://schema.org/BlogPosting" [ngClass]="post.cover" class="mdl-card mdl-cell mdl-cell--12-col">
+  <meta itemprop="name headline" [attr.content]="post.title" />
+  <meta itemprop="abstract" [attr.content]="post.description" />
+  <meta itemprop="author" [attr.content]="post.author" />
+  <meta itemprop="datePublished" [attr.content]="post.datePublished" />
+
+  <div class="mdl-card__media mdl-color-text--grey-50">
+    <h3 itemprop="name headline"><a [attr.href]="post.route">{{post.title}}</a></h3>
+  </div>
+  <div itemprop="abstract" class="mdl-color-text--grey-600 mdl-card__supporting-text">
+    {{post.description}}
+  </div>
+  <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+    <!-- <div class="minilogo"></div> -->
+    <img itemprop="image" [src]="post.avatar" [alt]="post.author" class="minilogo">
+    <div>
+      <strong itemprop="name">{{post.author}}</strong>
+      <span itemprop="datePublished">{{post.datePublished | date}}</span>
+    </div>
+  </div>
+</article>
