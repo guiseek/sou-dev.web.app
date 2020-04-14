@@ -1,6 +1,7 @@
 const { RemoveAngular } = require('./dist/remove-angular');
+const { AddPrismJs } = require('./dist/add-prismjs');
 
-const postRenderers = [RemoveAngular];
+const postRenderers = [RemoveAngular, AddPrismJs];
 
 exports.config = {
   projectRoot: "./src",

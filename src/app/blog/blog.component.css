@@ -1,4 +1,6 @@
-
+.demo-blog .mdl-layout__content {
+  padding-top: 60px;
+}
 
  ::slotted(h1)  {
   color:rgb(51, 6, 37);
