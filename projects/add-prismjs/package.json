@@ -1,5 +1,5 @@
 {
-  "name": "remove-angular",
+  "name": "add-prismjs",
   "version": "0.0.1",
   "peerDependencies": {
     "@scullyio/scully": "latest"

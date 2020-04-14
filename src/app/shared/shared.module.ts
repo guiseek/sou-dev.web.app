@@ -7,10 +7,18 @@ import { PostCardComponent } from './post-card/post-card.component';
 
 
 @NgModule({
-  declarations: [LogoComponent, FooterComponent, PostCardComponent],
+  declarations: [
+    LogoComponent,
+    FooterComponent,
+    PostCardComponent,
+  ],
   imports: [
     CommonModule
   ],
-  exports: [LogoComponent, FooterComponent, PostCardComponent]
+  exports: [
+    LogoComponent,
+    FooterComponent,
+    PostCardComponent,
+  ]
 })
 export class SharedModule { }

@@ -19,6 +19,10 @@
       "remove-angular": [
         "dist/remove-angular/remove-angular",
         "dist/remove-angular"
+      ],
+      "add-prismjs": [
+        "dist/add-prismjs/add-prismjs",
+        "dist/add-prismjs"
       ]
     }
   },
