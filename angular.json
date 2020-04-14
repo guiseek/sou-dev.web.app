@@ -123,6 +123,86 @@
           }
         }
       }
+    },
+    "remove-angular": {
+      "projectType": "library",
+      "root": "projects/remove-angular",
+      "sourceRoot": "projects/remove-angular/src",
+      "prefix": "plugin",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/remove-angular/tsconfig.lib.json",
+            "project": "projects/remove-angular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/remove-angular/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/remove-angular/src/test.ts",
+            "tsConfig": "projects/remove-angular/tsconfig.spec.json",
+            "karmaConfig": "projects/remove-angular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/remove-angular/tsconfig.lib.json",
+              "projects/remove-angular/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "add-prismjs": {
+      "projectType": "library",
+      "root": "projects/add-prismjs",
+      "sourceRoot": "projects/add-prismjs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/add-prismjs/tsconfig.lib.json",
+            "project": "projects/add-prismjs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/add-prismjs/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/add-prismjs/src/test.ts",
+            "tsConfig": "projects/add-prismjs/tsconfig.spec.json",
+            "karmaConfig": "projects/add-prismjs/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/add-prismjs/tsconfig.lib.json",
+              "projects/add-prismjs/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "sou-dev"
 }

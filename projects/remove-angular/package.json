@@ -1,0 +1,7 @@
+{
+  "name": "remove-angular",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@scullyio/scully": "latest"
+  }
+}
